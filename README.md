@@ -1,4 +1,7 @@
 # HashGeneratorFX
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+
 HashGenerator program rewritten using JavaFX instead of Swing , added material design with the help of JFoenix library.
 You can view the old HashGenerator utility with the old UI [here](https://github.com/theJaxon/HashGenerator).
 
