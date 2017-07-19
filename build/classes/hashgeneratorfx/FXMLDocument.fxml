@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="773.0" prefWidth="1030.0" style="-fx-background-color: #293C4F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hashgeneratorfx.FXMLDocumentController">
+   <children>
+      <JFXTextField fx:id="SelectedFilePath" focusColor="#0fa838" labelFloat="true" layoutX="66.0" layoutY="139.0" prefHeight="34.0" prefWidth="679.0" promptText="Select the file you want to generate the hash for" stylesheets="@styles.css" unFocusColor="#79d1a2">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="BrowseButton" buttonType="RAISED" layoutX="828.0" layoutY="140.0" onMouseClicked="#BrowseButtonClicked" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: #37D9C4;" text="Browse" textFill="#6d4023">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <Label layoutX="54.0" layoutY="281.0" prefHeight="23.0" prefWidth="70.0" text="MD5 :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="60.0" layoutY="498.0" prefHeight="25.0" prefWidth="82.0" text="SHA256 :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="54.0" layoutY="384.0" prefHeight="23.0" prefWidth="70.0" text="SHA1 :" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <JFXTextField fx:id="MD5TextField" focusColor="#0ea939" labelFloat="true" layoutX="157.0" layoutY="259.0" prefHeight="33.0" prefWidth="533.0" stylesheets="@styles.css" unFocusColor="#78d2a2">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="CopyMD5Button" buttonType="RAISED" layoutX="830.0" layoutY="257.0" onAction="#CopyMD5Function" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: #00BFB1;" text="Copy MD5" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="CopySHA1Button" buttonType="RAISED" layoutX="829.0" layoutY="362.0" onAction="#CopySHA1Function" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: #00BFB1;" text="Copy SHA1" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="CopySHA256Button" buttonType="RAISED" layoutX="829.0" layoutY="479.0" onAction="#CopySHA256Function" prefHeight="34.0" prefWidth="137.0" style="-fx-background-color: #00BFB1;" text="Copy SHA256" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="SHA1TextField" focusColor="#0ea939" layoutX="156.0" layoutY="366.0" prefHeight="33.0" prefWidth="569.0" stylesheets="@styles.css" unFocusColor="#78d2a2">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="SHA256TextField" focusColor="#0ea939" layoutX="156.0" layoutY="483.0" prefHeight="33.0" prefWidth="585.0" stylesheets="@styles.css" unFocusColor="#78d2a2">
+         <font>
+            <Font size="16.0" />
+         </font></JFXTextField>
+      <JFXToggleButton fx:id="UppercaseToggleButton" layoutX="756.0" layoutY="44.0" onAction="#UpperCaseFunction" prefHeight="60.0" prefWidth="215.0" text="Uppercase" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXToggleButton>
+      <JFXButton fx:id="SaveHashesButton" buttonType="RAISED" layoutX="59.0" layoutY="720.0" onMouseClicked="#SaveHashesFunction" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #E55B85;" text="Save Hashes" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="OriginalHashText" focusColor="#0ea939" labelFloat="true" layoutX="59.0" layoutY="626.0" prefHeight="34.0" prefWidth="679.0" promptText="Verify with the original hash " stylesheets="@styles.css" unFocusColor="#78d2a2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="HashTypesComboBox" focusColor="#293c4f" labelFloat="true" layoutX="834.0" layoutY="630.0" prefHeight="30.0" prefWidth="137.0" stylesheets="@styles.css" unFocusColor="#293c4f" />
+      <JFXButton fx:id="VerifyButton" buttonType="RAISED" layoutX="834.0" layoutY="720.0" onMouseClicked="#VerifyButtonFunction" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #37D9C4;" text="Verify" textFill="#6d4023">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="Logo" fitHeight="56.0" fitWidth="191.0" layoutX="17.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.png" />
+         </image>
+      </ImageView>
+      <Separator fx:id="separator" layoutX="-3.0" layoutY="597.0" prefHeight="0.0" prefWidth="1030.0" stylesheets="@styles.css" />
+   </children>
+</AnchorPane>

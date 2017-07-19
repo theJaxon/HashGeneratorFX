@@ -1,0 +1,25 @@
+/*
+    Author     : Jaxon
+*/
+
+#SelectedFilePath, #MD5TextField, #SHA1TextField, #SHA256TextField, #OriginalHashText
+{
+    -fx-text-fill:#ffffff;
+}
+
+#HashTypesComboBox
+{
+    -fx-background: white;
+    -fx-background-color: white;
+    -fx-padding: 3 0 2 7;
+    /*-fx-text-fill: -fx-text-base-color;
+    
+    -fx-cell-size: 1.66667em; */
+}
+
+#separator
+{
+    -fx-border-style:solid;
+    /*-fx-border-color: FFBCC6 ;
+    -fx-background-radius: 4;*/
+}
